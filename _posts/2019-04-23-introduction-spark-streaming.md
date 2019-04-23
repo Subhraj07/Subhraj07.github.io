@@ -29,7 +29,7 @@ Spark Streaming is intended to process data that arrive continuously, it is nece
 - logs from [Flume](http://flume.apache.org/)
 - files from HDFS (to monitor the creation of new files only)
 - an MQ queue (type [ZeroMQ](http://zeromq.org/))
-- Tweets from Twitter (utilise l'API [Twitter4J](http://twitter4j.org/en/index.html))
+- Tweets from Twitter (utilise [Twitter4J](http://twitter4j.org/en/index.html))
 
 
 It is also possible to implement a custom data source by extending the [Receiver](http://spark.apache.org/docs/latest/api/java/org/apache/spark/streaming/receiver/Receiver.html) class.
