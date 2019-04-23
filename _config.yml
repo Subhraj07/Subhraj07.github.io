@@ -1,15 +1,13 @@
 # Site settings
-title: Alexis Seigneurin - Blog
-email: alexis@seigneurin.com
+title: Subhrajit - Blog
+email: techbiglover@gmail.com
 description: >
   Data Engineer - New York City, USA
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://aseigneurin.github.io" # the base hostname & protocol for your site
-twitter_username: aseigneurin
-github_username:  aseigneurin
-linkedin_url: in/alexisseigneurin
-bbl_url: http://www.brownbaglunch.fr/baggers.html#Alexis_Seigneurin_Paris
-stackoverflow_url: http://stackoverflow.com/story/alexis.seigneurin
+url: "https://subhraj07.github.io" # the base hostname & protocol for your site
+twitter_username: Subhraj07
+github_username:  Subhraj07
+linkedin_url: in/subhrajit-mohanty-55709b64
 
 # Build settings
 markdown: kramdown
