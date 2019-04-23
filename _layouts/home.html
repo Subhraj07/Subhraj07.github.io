@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+  
+    <div class="wrapper">
+
+      <header>
+        <h1>Alexis Seigneurin</h1>
+        <p></p>
+        <p class="view">
+          <a href="https://twitter.com/{{ site.twitter_username }}">
+            <span class="icon"><img src="/images/twitter-logo.png"></span>
+            <span>@aseigneurin</span>
+          </a>
+        </p>
+        <p class="view">
+          <a href="https://github.com/{{ site.github_username }}">
+            <span class="icon"><img src="/images/github-logo.png"></span>
+            <span>My GitHub</span>
+          </a>
+        </p>
+        <!--
+        <p class="view">
+          <a href="https://www.linkedin.com/{{ site.linkedin_url }}">
+            <span>My LinkedIn</span>
+          </a>
+        </p>
+        <p class="view">
+          <a href="{{ site.bbl_url }}">
+            <span>My Brown Bag Lunches</span>
+          </a>
+        </p>
+        -->
+        <p class="view">
+          <a href="{{ site.stackoverflow_url }}">
+            <span class="icon"><img src="/images/stackoverflow-logo.png"></span>
+            <span>My StackOverflow story</span>
+          </a>
+        </p>
+        <p class="view">{{ site.description }}</p>
+        <p class="view">
+          <img src="/images/aws-certified-big-data-specialty.png" width="100" alt="AWS Certified Big Data - Specialty">
+          <img src="/images/aws-certified-solutions-architect-associate.png" width="100" alt="AWS Solutions Architect Associate">
+        </p>
+        <p class="view">
+          <img src="/images/0712_Seigneurin.png" width="100" alt="Certified Developer on Apache Spark">
+          <a href="https://www.credential.net/17duewep"><img src="/images/certification-kafka.jpg" width="100" alt="Confluent Certified Developer for Apache Kafka"></a>
+        </p>
+      </header>
+
+      <section>
+        {{ content }}
+      </section>
+
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

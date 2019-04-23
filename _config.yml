@@ -1,0 +1,18 @@
+# Site settings
+title: Alexis Seigneurin - Blog
+email: alexis@seigneurin.com
+description: >
+  Data Engineer - New York City, USA
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://aseigneurin.github.io" # the base hostname & protocol for your site
+twitter_username: aseigneurin
+github_username:  aseigneurin
+linkedin_url: in/alexisseigneurin
+bbl_url: http://www.brownbaglunch.fr/baggers.html#Alexis_Seigneurin_Paris
+stackoverflow_url: http://stackoverflow.com/story/alexis.seigneurin
+
+# Build settings
+markdown: kramdown
+kramdown:
+   syntax_highlighter_opts:
+      disable : true
