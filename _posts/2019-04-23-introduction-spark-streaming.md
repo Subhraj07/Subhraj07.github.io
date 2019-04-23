@@ -5,7 +5,7 @@ date:   2019-04-23 11:00:00
 tags: spark Streaming
 language: EN
 ---
-Spark permet de traiter des données qui sont figées à un instant _T_. Grâce au module Spark Streaming, il est possible de traiter des flux de données qui arrivent en continu, et donc de traiter ces données au fur et à mesure de leur arrivée.
+Spark can process data that are frozen at time t . Thanks to the Spark Streaming module, it is possible to process streams of data that arrive continuously, and thus to process these data as and when they arrive.
 
 # Model of micro-batches
 
