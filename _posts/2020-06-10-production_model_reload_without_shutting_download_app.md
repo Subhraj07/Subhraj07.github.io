@@ -178,14 +178,3 @@ async def read_item():
 * predict image and see the result of alexnet model
 
 <p style="text-align:center;"><img src="/images/model_deployement/4.png" style="width:75%"></p>
-
-
-
-
-
-
-
-
-
-
-
