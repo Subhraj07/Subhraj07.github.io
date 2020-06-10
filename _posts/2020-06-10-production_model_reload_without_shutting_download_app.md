@@ -59,7 +59,6 @@ code can be available [here](https://github.com/Subhraj07/blog_codes/tree/master
 
 *predict.py*
 
-```
 import requred packages
 
 *
@@ -116,44 +115,43 @@ return {
         "predicted_results" : [{classes[idx] : percentage[idx].item()} for idx in indices[0][:5]]
     }
 *
-```
+
 Reference [here](https://www.learnopencv.com/pytorch-for-beginners-image-classification-using-pre-trained-models/)
 
 *app.py*
 
-```
 import requred packages and predict class dependencies
 
-*
+```
 from fastapi import FastAPI
 import uvicorn
 from torchvision import models
 from predict import predicted_results
-*
+```
 
 intialise fastapi
-*
+```
 app = FastAPI()
-*
+```
 
 initialise resnet model for the app
-*
+```
 pymodel = models.resnet101(pretrained=True)
-*
+```
 
 call predict get method with img_path parameter and call predict method with the details
-*
+```
 # query parameter http://127.0.0.1:8000/predict/?img_path=path/dog.jpg
 @app.get("/predict/")
 async def predict(img_path: str = ""):
     return predicted_results(img_path, pymodel)
-*
+```
 
 update alexnet model without shutting down the application
 
 call global model variable
 update with new model
-
+```
 @app.post("/update_model")
 async def read_item():
     global pymodel
@@ -163,9 +161,9 @@ async def read_item():
 
 # Demo
 
-steps:
+#### steps:
 
-* intialise service
+* intialize service
 
 <p style="text-align:center;"><img src="/images/model_deployement/1.png" style="width:75%"></p>
 
