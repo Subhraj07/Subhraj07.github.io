@@ -150,6 +150,10 @@ async def predict(img_path: str = ""):
 *
 
 update alexnet model without shutting down the application
+
+call global model variable
+update with new model
+
 @app.post("/update_model")
 async def read_item():
     global pymodel
