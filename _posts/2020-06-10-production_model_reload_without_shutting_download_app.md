@@ -27,7 +27,7 @@ FastAPI is a modern, fast (high-performance), web framework for building APIs wi
     * Robust: Get production-ready code. With automatic interactive documentation.
     * Standards-based: Based on (and fully compatible with) the open standards for APIs: OpenAPI (previously known as Swagger) and JSON Schema.
 
-    Reference [FastAPI](https://fastapi.tiangolo.com/)
+Reference [FastAPI](https://fastapi.tiangolo.com/)
 
 # Build Services
 
@@ -178,4 +178,3 @@ async def read_item():
 * predict image and see the result of alexnet model
 
 <p style="text-align:center;"><img src="/images/model_deployement/4.png" style="width:75%"></p>
-
