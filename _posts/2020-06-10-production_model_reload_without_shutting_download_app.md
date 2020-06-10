@@ -33,11 +33,11 @@ key features:
 
 python dependecies need to install using pip: torch, torchvision, fastapi, uvicorn, Pillow
 ```
-torch       : Dynamic neural networks in Python
-torchvision : consists of popular datasets, model architectures, and common image transformations for computer vision.
-fastapi     : fast web framework for building APIs
-uvcorn      : lightning-fast ASGI server
-Pillow      : Python Imaging Library 
+torch                       : Dynamic neural networks in Python
+torchvision                 : consists of popular datasets, model architectures, and common image transformations for computer vision.
+fastapi                     : fast web framework for building APIs
+uvcorn                      : lightning-fast ASGI server
+Pillow                      : Python Imaging Library 
 ```
 
 *folder structure*
@@ -47,13 +47,13 @@ Pillow      : Python Imaging Library
 ├── imagenet_classes.txt
 └── predict.py
 
-app.py                  : fastapi service
-predict.py              : predict the probabilities of type of image and type of model
-dog.jpg                 : Image of a dog
-imagenet_classes.txt    : classes of pretrained model (resnet and alexnet)
+app.py                      : fastapi service
+predict.py                  : predict the probabilities of type of image and type of model
+dog.jpg                     : Image of a dog
+imagenet_classes.txt        : classes of pretrained model (resnet and alexnet)
 ```
 
-code can be available [here](https://github.com/Subhraj07/blog_codes/tree/master/model_update_fastapi)
+code can be available [here](https://github.com/Subhraj07/blog_codes/tree/master/2020-06-10-production_model_reload_without_shutting_download_app)
 
 # Code walkthrough
 
@@ -61,23 +61,23 @@ code can be available [here](https://github.com/Subhraj07/blog_codes/tree/master
 
 import requred packages
 
-*
+```
 from torchvision import models, transforms
 import torch
 from PIL import Image
-*
+```
 
 method -> predicted_results 
 
 input parameter: image_path , pretrained model
 
 read image using PIL
-*
+```
 img = Image.open(img)
-*
+```
 
 transform the input image so that they have the right shape and values should be similar to the ones which were used while training the model using torchvision module
-*
+```
 transform = transforms.Compose([           
     transforms.Resize(256),                    
     transforms.CenterCrop(224),                
@@ -86,35 +86,35 @@ transform = transforms.Compose([
     mean=[0.485, 0.456, 0.406],                
     std=[0.229, 0.224, 0.225]                  
     )])
-*
+```
 
 pre-process the image
-*
+```
 img_t = transform(img)
 batch_t = torch.unsqueeze(img_t, 0)
-*
+```
 
 Load ImageNet classes
-*
+```
 with open('imagenet_classes.txt') as f:
     classes = [line.strip() for line in f.readlines()]
-*
+```
 
 get index of maximum output vector scores
-*
+```
 out = pymodel(batch_t)
 # Forth, print the top 5 classes predicted by the model
 _, indices = torch.sort(out, descending=True)
 percentage = torch.nn.functional.softmax(out, dim=1)[0] * 100
-*
+```
 
 return model name and most probable classes
-*
+```
 return {
         "model_name" : pymodel.__class__.__name__,
         "predicted_results" : [{classes[idx] : percentage[idx].item()} for idx in indices[0][:5]]
     }
-*
+```
 
 Reference [here](https://www.learnopencv.com/pytorch-for-beginners-image-classification-using-pre-trained-models/)
 
