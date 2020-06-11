@@ -59,7 +59,7 @@ code can be available [here](https://github.com/Subhraj07/blog_codes/tree/master
 
 *predict.py*
 
-import requred packages
+import required packages
 
 ```
 from torchvision import models, transforms
@@ -134,7 +134,7 @@ intialise fastapi
 app = FastAPI()
 ```
 
-initialise resnet model for the app
+initialize resnet model for the app
 ```
 pymodel = models.resnet101(pretrained=True)
 ```
