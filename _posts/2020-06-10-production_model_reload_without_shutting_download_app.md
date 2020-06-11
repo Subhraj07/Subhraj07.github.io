@@ -129,7 +129,7 @@ from torchvision import models
 from predict import predicted_results
 ```
 
-intialise fastapi
+intialize fastapi
 ```
 app = FastAPI()
 ```
@@ -157,6 +157,12 @@ async def read_item():
     global pymodel
     pymodel = models.alexnet(pretrained=True)
     return {"message": "model updated sucessfully"}
+```
+
+start uvicorn application
+```
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
 ```
 
 # Demo
