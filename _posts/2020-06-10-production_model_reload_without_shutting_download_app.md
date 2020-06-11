@@ -53,7 +53,7 @@ dog.jpg                     : Image of a dog
 imagenet_classes.txt        : classes of pretrained model (resnet and alexnet)
 ```
 
-code can be available [here](https://github.com/Subhraj07/blog_codes/tree/master/2020-06-10-production_model_reload_without_shutting_download_app)
+code is available [here](https://github.com/Subhraj07/blog_codes/tree/master/2020-06-10-production_model_reload_without_shutting_download_app)
 
 # Code walkthrough
 
@@ -120,7 +120,7 @@ Reference [here](https://www.learnopencv.com/pytorch-for-beginners-image-classif
 
 *app.py*
 
-import requred packages and predict class dependencies
+import required packages and predict class dependencies
 
 ```
 from fastapi import FastAPI
@@ -129,7 +129,7 @@ from torchvision import models
 from predict import predicted_results
 ```
 
-intialize fastapi
+initialize fastapi
 ```
 app = FastAPI()
 ```
@@ -169,7 +169,7 @@ if __name__ == "__main__":
 
 #### steps:
 
-* intialize service
+* initialize service
 
 <p style="text-align:center;"><img src="/images/model_deployement/1.png" style="width:75%"></p>
 
