@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Updated model configure without shutting down services"
+title:  "Update model configuration without shutting down services"
 date:   2020-06-10 11:00:00
 tags: Model Deployement
 language: EN
